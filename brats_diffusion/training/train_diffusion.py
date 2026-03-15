@@ -14,8 +14,8 @@ import diffusers
 from diffusers import DDPMScheduler, UNet2DModel, DDIMScheduler
 from diffusers.optimization import get_cosine_schedule_with_warmup
 
-from seg_diffusion.config import TrainingConfig
-from seg_diffusion.data import BraTSDataset, add_segmentations_to_noise
+from brats_diffusion.config import TrainingConfig
+from brats_diffusion.data import BraTSDataset, add_segmentations_to_noise
 
 
 def get_model_and_scheduler(config: TrainingConfig, device: torch.device):

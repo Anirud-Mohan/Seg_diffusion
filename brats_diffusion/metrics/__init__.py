@@ -1,6 +1,6 @@
 """Metrics for segmentation and generation evaluation."""
-from seg_diffusion.metrics.dice import multiclass_dice
-from seg_diffusion.metrics.fid_ssim import (
+from brats_diffusion.metrics.dice import multiclass_dice
+from brats_diffusion.metrics.fid_ssim import (
     extract_seg_encoder_features,
     compute_mean_cov,
     compute_fid,

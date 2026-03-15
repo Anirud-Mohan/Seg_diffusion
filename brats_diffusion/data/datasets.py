@@ -9,8 +9,8 @@ from PIL import Image
 from torch.utils.data import Dataset
 from torchvision import transforms
 
-from seg_diffusion.config import IMG_SIZE, NUM_CLASSES
-from seg_diffusion.data.utils import rgb_to_label
+from brats_diffusion.config import IMG_SIZE, NUM_CLASSES
+from brats_diffusion.data.utils import rgb_to_label
 
 
 class BratsFlairSliceDataset(Dataset):
@@ -52,7 +52,7 @@ class BratsFlairSliceDataset(Dataset):
 
         mask_rgb = np.array(Image.open(mask_path))
         if mask_rgb.ndim == 2:
-            from seg_diffusion.config import DIFF_MASK_VALUE_TO_CLASS
+            from brats_diffusion.config import DIFF_MASK_VALUE_TO_CLASS
             label = np.zeros_like(mask_rgb, dtype=np.int64)
             for src_val, cls in DIFF_MASK_VALUE_TO_CLASS.items():
                 label[mask_rgb == src_val] = cls

@@ -10,10 +10,10 @@ import numpy as np
 import torch
 
 # Default paths (override via env or CLI)
-BASE = Path(os.environ.get("SEG_DIFFUSION_BASE", "."))
-DATA_ROOT = BASE / os.environ.get("SEG_DIFFUSION_DATA", "brats_final_split")
+BASE = Path(os.environ.get("BRATS_DIFFUSION_BASE", "."))
+DATA_ROOT = BASE / os.environ.get("BRATS_DIFFUSION_DATA", "brats_final_split")
 RUNS = BASE / "runs"
-LOCAL = Path(os.environ.get("SEG_DIFFUSION_LOCAL", "/tmp/seg_diffusion_work"))
+LOCAL = Path(os.environ.get("BRATS_DIFFUSION_LOCAL", "/tmp/brats_diffusion_work"))
 LOCAL_IMG_ROOT = LOCAL / "brats_final_split_flair"
 
 # Model and artifact identifiers (evaluation)
@@ -22,9 +22,9 @@ PROJECT = "brats-counterfactual-diffusion"
 M1_ARTIFACT = f"{ENTITY}/{PROJECT}/model1_uncond_ddim:v0"
 M2_ARTIFACT = f"{ENTITY}/{PROJECT}/checkpoint-epoch-60:v2"
 M3_ARTIFACT = f"{ENTITY}/{PROJECT}/checkpoint-epoch-60:v0"
-M1_DIR = Path(os.environ.get("SEG_DIFFUSION_M1_DIR", "/tmp/model_checkpoint/m1_checkpoint"))
-M2_DIR = Path(os.environ.get("SEG_DIFFUSION_M2_DIR", "/tmp/model_checkpoint/m2_checkpoint"))
-M3_DIR = Path(os.environ.get("SEG_DIFFUSION_M3_DIR", "/tmp/model_checkpoint/m3_checkpoint"))
+M1_DIR = Path(os.environ.get("BRATS_DIFFUSION_M1_DIR", "/tmp/model_checkpoint/m1_checkpoint"))
+M2_DIR = Path(os.environ.get("BRATS_DIFFUSION_M2_DIR", "/tmp/model_checkpoint/m2_checkpoint"))
+M3_DIR = Path(os.environ.get("BRATS_DIFFUSION_M3_DIR", "/tmp/model_checkpoint/m3_checkpoint"))
 SEG_UNET_CKPT = BASE / "checkpoints" / "unet_best_5class.pth"
 
 # Dataset layout

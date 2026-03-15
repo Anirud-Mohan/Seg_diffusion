@@ -2,9 +2,9 @@
 import torch
 from torch.utils.data import DataLoader
 
-from seg_diffusion.data import BratsFlairSliceDataset
-from seg_diffusion.metrics.dice import multiclass_dice
-from seg_diffusion.models import UNetSeg
+from brats_diffusion.data import BratsFlairSliceDataset
+from brats_diffusion.metrics.dice import multiclass_dice
+from brats_diffusion.models import UNetSeg
 
 
 def train_unet(

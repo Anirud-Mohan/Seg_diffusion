@@ -6,8 +6,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from seg_diffusion.config import DATA_ROOT, M1_DIR, M2_DIR, M3_DIR, set_seed
-from seg_diffusion.evaluation.eval_metrics import run_full_evaluation
+from brats_diffusion.config import DATA_ROOT, M1_DIR, M2_DIR, M3_DIR, set_seed
+from brats_diffusion.evaluation.eval_metrics import run_full_evaluation
 
 
 def main():

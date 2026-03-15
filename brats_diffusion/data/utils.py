@@ -9,7 +9,7 @@ import torch
 from PIL import Image
 from torchvision import transforms
 
-from seg_diffusion.config import COLOR_TO_LABEL, DATA_ROOT, DIFF_MASK_VALUE_TO_CLASS, IMG_SIZE
+from brats_diffusion.config import COLOR_TO_LABEL, DATA_ROOT, DIFF_MASK_VALUE_TO_CLASS, IMG_SIZE
 
 
 def rgb_to_label(mask_rgb: np.ndarray) -> np.ndarray:

@@ -6,7 +6,7 @@ from skimage.exposure import match_histograms
 import torch
 import torch.nn.functional as F
 
-from seg_diffusion.models.unet import UNetSeg
+from brats_diffusion.models.unet import UNetSeg
 
 
 def extract_seg_encoder_features(seg_model: UNetSeg, x: torch.Tensor) -> torch.Tensor:

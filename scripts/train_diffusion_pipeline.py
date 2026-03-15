@@ -6,8 +6,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from seg_diffusion.config import TrainingConfig, set_seed
-from seg_diffusion.training.train_diffusion import run_diffusion_training
+from brats_diffusion.config import TrainingConfig, set_seed
+from brats_diffusion.training.train_diffusion import run_diffusion_training
 
 
 def main():

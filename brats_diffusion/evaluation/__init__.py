@@ -1,5 +1,5 @@
 """Evaluation metrics and aggregation for diffusion and segmentation."""
-from seg_diffusion.evaluation.eval_metrics import (
+from brats_diffusion.evaluation.eval_metrics import (
     evaluate_unet_on_split,
     load_uncond_from_dir,
     load_seg_guided_components,

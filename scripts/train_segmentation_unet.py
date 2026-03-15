@@ -7,8 +7,8 @@ from pathlib import Path
 # Add project root for imports
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from seg_diffusion.config import set_seed, DATA_ROOT
-from seg_diffusion.training.train_unet import train_unet
+from brats_diffusion.config import set_seed, DATA_ROOT
+from brats_diffusion.training.train_unet import train_unet
 
 
 def main():

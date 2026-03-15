@@ -16,7 +16,7 @@ from tqdm.auto import tqdm
 
 from diffusers import DiffusionPipeline, UNet2DModel, DDPMScheduler
 
-from seg_diffusion.config import (
+from brats_diffusion.config import (
     DATA_ROOT,
     EVAL_CFG,
     IMG_SIZE,
@@ -24,7 +24,7 @@ from seg_diffusion.config import (
     COLOR_TO_LABEL,
     DIFF_MASK_VALUE_TO_CLASS,
 )
-from seg_diffusion.data import (
+from brats_diffusion.data import (
     BratsFlairSliceDataset,
     load_image,
     load_diffusion_mask,
@@ -32,9 +32,9 @@ from seg_diffusion.data import (
     rgb_to_label,
     collect_paired_paths,
 )
-from seg_diffusion.models import UNetSeg
-from seg_diffusion.metrics.dice import multiclass_dice, multiclass_iou
-from seg_diffusion.metrics.fid_ssim import (
+from brats_diffusion.models import UNetSeg
+from brats_diffusion.metrics.dice import multiclass_dice, multiclass_iou
+from brats_diffusion.metrics.fid_ssim import (
     extract_seg_encoder_features,
     compute_mean_cov,
     compute_fid,

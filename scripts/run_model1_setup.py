@@ -8,8 +8,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from seg_diffusion.config import DATA_ROOT, LOCAL_IMG_ROOT, BASE
-from seg_diffusion.data import copy_flair_split, count_pngs
+from brats_diffusion.config import DATA_ROOT, LOCAL_IMG_ROOT, BASE
+from brats_diffusion.data import copy_flair_split, count_pngs
 
 
 def main():

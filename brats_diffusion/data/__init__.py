@@ -1,6 +1,6 @@
 """Data loading and utilities for BraTS-style datasets."""
-from seg_diffusion.data.datasets import BratsFlairSliceDataset, BraTSDataset
-from seg_diffusion.data.utils import (
+from brats_diffusion.data.datasets import BratsFlairSliceDataset, BraTSDataset
+from brats_diffusion.data.utils import (
     rgb_to_label,
     copy_flair_split,
     count_pngs,
